@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TSSolutions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/w3.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- navigation bar -->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body
+{
+	font-family: Montserrat;
+	line-height: 24px;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    word-wrap: break-word;
+    -webkit-transition: opacity 0.24s ease-in-out;
+    -moz-transition: opacity 0.24s ease-in-out;
+    transition: opacity 0.24s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6
+{
+	margin:0px;
+	padding: 0px;
+}
+h6
+{
+	font-size: 16px;
+}
+h5
+{
+	font-size: 25px;
+}
+h4
+{
+	font-size: 30px;
+}
+h3
+{
+	font-size: 40px;
+}
+h2
+{
+	font-size: 45px;
+}
+h1
+{
+	font-size: 50px;
+}
+.pads
+{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+@media (max-width:600px)
+{
+	.pads
+	{
+		padding-left: 10px;
+		padding-right: 10px;	
+	}
+}
+@media (max-width:900px) and (min-width:601px)
+{
+	.pads
+	{
+		padding-left: 30px;
+		padding-right: 30px;	
+	}
+}
+w3-container, w3-half, w3-quarter, w3-third, w3-two-third, w3-rest, w3-threequarter, w3-left, w3-right
+{
+	padding:0px;
+	margin:0px;
+}
+</style>
+<div id="nav"></div>
+<script type="text/javascript">
+if($(document).width()>620)
+{
+	$("#nav").load('./big-nav.html');
+}
+else
+{
+	$("#nav").load('./small-nav.html');
+}
+</script>
+<!-- /navigation bar -->
+
+<!-- div one -->
+<style type="text/css">
+.start
+{
+	margin-top: 60px;
+	padding:0px;
+	background: linear-gradient(rgba(77,77,77,.5), rgba(77,77,77,.5)), url("./img/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+.start h2
+{
+	font-weight: 600;
+}
+.start .place
+{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 200px;
+	color: #202020;
+	float: left;
+	font-weight: 600;
+	margin-right: 25px;
+}
+.start i
+{
+	font-size: 23px;
+}
+.start .place select
+{
+	border:0px;
+	background-color: #fff;
+	color: #202020;
+	width: 154px;
+	margin-top:2px;
+	float: right;
+}
+.start .service
+{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 210px;
+	color: #202020;
+	float: left;
+	margin-right: 25px;
+	font-weight: 600;
+}
+.start .service select
+{
+	border:0px;
+	background-color: #fff;
+	color: #202020;
+	width: 160px;
+	float: right;
+	margin-top:2px;
+}
+.start .product
+{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 200px;
+	float: left;
+	color: #202020;
+	font-weight: 600;
+}
+.start .product select
+{
+	border:0px;
+	background-color: #fff;
+	color: #202020;
+	width: 145px;
+	margin-top: 2px;
+	float: right;
+}
+.start .outer
+{
+	width: 660px;
+	margin:auto;
+	margin-top: 42px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+@media (max-width: 680px)
+{
+	.start .outer
+	{
+		width:auto;
+		flex-wrap: wrap;
+	}
+	.start .product, .start .service, .start .place
+	{
+		margin-bottom: 15px;
+	}
+	#big-no
+	{
+		display: none;
+	}
+	.start
+	{
+		height: auto;
+	}
+}
+@media (max-width: 435px)
+{
+	.start .product
+	{
+		margin-left: 0px;
+	}
+	.start .service, .start .place
+	{
+		margin-right: 0px;
+	}
+}
+@media (min-width: 680px)
+{
+	.start .product, .start .service, .start .place
+	{
+		margin-bottom: 0px;
+	}
+}
+.start .query, .start .appointment
+{
+	border-radius:25px;
+	width:200px;
+	float:left;
+	background-color: #eee;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #202020;
+	font-size: 17px;
+	font-weight: 600;
+}
+.start .query
+{
+	background: lightblue;
+	margin-right: 30px;
+}
+.start .appointment
+{
+	background: lightgreen;
+}
+.start .two
+{
+	margin: auto;
+	width: 450px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+@media (max-width: 620px)
+{
+	.start h2
+	{
+		line-height: 40px;
+	}
+}
+@media (max-width: 460px)
+{
+	.start .two
+	{
+		width: auto;
+		flex-wrap: wrap;
+	}
+	.start .query, .start .appointment
+	{
+		display: block;
+		margin-bottom: 15px;
+		margin-left:0px;
+		margin-right: 0px;
+	}
+}
+</style>
+<div class="w3-container start">
+	<h2>Your Service Expert in Delhi</h2>
+	<br>
+	<h5>Get instant access to reliable and affordable services</h5>
+	<br>
+	<div class="w3-container outer">
+		<div class="place">
+			<i class="fas fa-map-marker-alt w3-left"></i> 
+			<select>
+				<option selected="true" disabled="true">Place</option>
+				<option>Alipur</option>
+				<option>Mukhmelpur</option>
+				<option>Hiranki</option>
+				<option>Budhpur</option>
+				<option>Rohini</option>
+				<option>Pitampura</option>
+				<option>Hiranki</option>
+				<option>Buradi</option>
+				<option>Nathupura</option>
+				<option>Bakhtawar pur</option>
+				<option>Nagli</option>
+				<option>Holambi</option>
+				<option>Kheda</option>
+				<option>Narela</option>
+				<option>Tajpur</option>
+				<option>Other</option>
+			</select>
+		</div>
+		<div class="service">
+			<i class="fas fa-wrench w3-left"></i> 
+			<select>
+				<option selected="true" disabled="true">Service</option>
+				<option>Repair</option>
+				<option>Purchase New</option>
+				<option>Purchase Old</option>
+				<option>Service</option>
+				<option>Other</option>
+			</select>
+		</div>
+		<div class="product">
+			<i class="fas fa-desktop w3-left"></i> 
+			<select>
+				<option selected="true" disabled="true">Product</option>
+				<option>Computer</option>
+				<option>Laptop</option>
+				<option>Printer</option>
+				<option>Monitor</option>
+				<option>Speakers</option>
+				<option>Mouse</option>
+				<option>Keyboard</option>
+				<option>Cartdrige</option>
+				<option>Other</option>
+			</select>
+		</div>
+	</div>
+	<br><br><br id="big-no"><br id="big-no">
+	<div class="two">
+		<div class="query">
+			Ask your Query
+		</div>
+		<div class="appointment">
+			Book Appointment
+		</div>
+	</div>
+</div>
+<!-- div one -->
+
+<!-- div grey bg and icons -->
+<style type="text/css">
+.grey
+{
+	background-color: #f4f4f4;
+	text-align: center;
+	color: #2e2e2e;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: grey;
+}
+.grey .fi
+{
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.grey .fi:hover
+{
+	color: #202020;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.grey .fi img
+{
+	width: 70px;
+	margin-bottom: 10px;
+}
+.grey .fi
+{
+	width: 16.6%;
+	float: left;
+	text-align: center;	
+	display: table-cell;
+	vertical-align: middle;
+}
+@media (max-width: 600px)
+{
+	.grey .fi
+	{
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+</style>
+<div class="w3-container grey pads">
+	<div class="fi">
+		<img src="./svg/001-editor.svg">
+		<br>
+		Desktop
+	</div>
+	<div class="fi">
+		<img src="./svg/005-keyboard.svg">
+		<br>
+		Computer Accesories
+	</div>
+	<div class="fi">
+		<img src="./svg/002-laptop.svg">
+		<br>
+		Laptop
+	</div>
+	<div class="fi">
+		<img src="./svg/006-windows.svg">
+		<br>
+		Softwares
+	</div>
+	<div class="fi">
+		<img src="./svg/003-printer.svg">
+		<br>
+		printer
+	</div>
+	<div class="fi">
+		<img src="./svg/004-printer-cartridges.svg">
+		<br>
+		Cartdriges
+	</div>
+</div>
+<!-- /div grey bg and icons -->
+
+<!-- recommended -->
+<style type="text/css">
+.data .recommended
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.data .recommended h5
+{
+	font-size: 20px;
+	font-weight: 600;
+}
+.data .inside
+{
+	overflow: hidden;
+	width: 269px;
+	height: 140px;
+	border:1px solid #f2f2f2;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.data .outer
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:15px;
+}
+.data .flex
+{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 6px;
+	height:6px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	background-color: #555;
+}
+#recommended-1
+{
+	background-image: url('./img/hqdefault.jpg');
+}
+#recommended-2
+{
+	background-image: url('./img/Fix-Slow-Computers.jpg');
+}
+#recommended-3
+{
+	background-image: url('./img/img_2565.jpg');
+}
+#recommended-4
+{
+	background-image: url('./img/big_MQ052LLA.jpg');
+}
+.data .flex .outer .inside .text a
+{
+	text-decoration: none;
+}
+.data .flex .outer .inside .text
+{
+	background-color: #0d1f36;
+	color: #fff;
+	height: 140px;
+	width: 110px;
+	padding:15px;
+	margin-left: -110px;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.data .flex .outer:hover .inside .text
+{
+	margin-left: 0px;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.data .flex .outer .inside .text .price
+{
+	background-color: #36a4dc;
+	color: #fff;
+	padding:5px;
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 600;
+	margin-top:3px;
+	margin-bottom: 15px;
+	transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	-webkit-transition: 0.2s;
+}
+.data .flex .outer .inside .text .price:hover
+{
+	background-color: #227caa;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+#other-5
+{
+	background-image:url('./img/telecomunicacoes.jpg');
+}
+#other-4
+{
+	background-image:url('./img/internet-wallpaper-25.jpg');
+}
+#other-3
+{
+	background-image:url('./img/connector.jpeg');
+}
+#other-2
+{
+	background-image:url('./img/networking.jpg');
+}
+#other-1
+{
+	background-image:url('./img/camera.jpeg');
+}
+#computer-1
+{
+	background-image:url('./img/S-17.jpg');
+}
+#computer-2
+{
+	background-image:url('./img/images.jpeg');
+}
+#computer-3
+{
+	background-image:url('./img/apple-macbook-pro-15-inch-2017-14.jpg');
+}
+#computer-4
+{
+	background-image:url('./img/Mac-Repair.jpg');
+}
+#computer-5
+{
+	background-image:url('./img/maxresdefault.jpg');
+}
+#computer-6
+{
+	background-image:url('./img/GettyImages-489081568-582f59295f9b58d5b1b367b5.jpg');
+}
+#computer-7
+{
+	background-image:url('./img/eurocom_980m_card-100585858-large.jpg');
+}
+#computer-8
+{
+	background-image:url('./img/lenovo-legion-y920t-inside-01.jpg');
+}
+#computer-9
+{
+	background-image:url('./img/Best-13-inch-Laptops-of-2016.jpg');
+}
+#computer-10
+{
+	background-image:url('./img/0004L7UY84V3UYAI-C122-F4.jpg');
+}
+#accessories-1
+{
+	background-image:url('./img/keyboard-1383837_960_720.jpg');
+}
+#accessories-2
+{
+	background-image:url('./img/dsc01339-2-100746903-large.jpg');
+}
+#accessories-3
+{
+	background-image:url('./img/best-wireless-printer-hero-01.jpg');
+}
+#accessories-4
+{
+	background-image:url('./img/HP Stack.JPG');
+}
+#accessories-5
+{
+	background-image:url('./img/MRMF2.jpeg');
+}
+#accessories-6
+{
+	background-image:url('./img/z337-speaker-system-with-bluetooth.jpg');
+}
+#accessories-7
+{
+	background-image:url('./img/fl-amazon-cloud-cam-10.jpg');
+}
+#accessories-8
+{
+	background-image:url('./img/item_XL_11099377_28843698.jpg');
+}
+#accessories-9
+{
+	background-image:url('./img/apc-br1000g-2.jpg');
+}
+#accessories-10
+{
+	background-image:url('./img/lenovo-ideacentre-y900-2(1).jpg');
+}
+#accessories-11
+{
+	background-image:url('./img/k2-_c6a3f574-d867-462f-ad31-e5c8f327f676.v1.jpg');
+}
+#accessories-12
+{
+	background-image:url('./img/plcc_pre.jpg');
+}
+</style>
+
+<div class="data">
+
+	<br><br>
+
+	<div class="w3-container pads recommended w3-padding-32">
+		<h5>Recommended Services</h5>
+		<br>
+		<div class="flex" id="style-1">
+			<div class="outer">
+				<div class="inside" id="recommended-1">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy New Desktop
+			</div>
+			<div class="outer">
+				<div class="inside" id="recommended-2">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Desktop Repair
+			</div>
+			<div class="outer">
+				<div class="inside" id="recommended-3">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Laptop Repair
+			</div>
+			<div class="outer">
+				<div class="inside" id="recommended-4">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new computer accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about computer accessories repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy Computer Accesories
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-container pads recommended w3-padding-32">
+		<h5>Computer</h5>
+		<br>
+		<div class="flex" id="style-1">
+			<div class="outer">
+				<div class="inside" id="computer-1">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy New Desktop
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-3">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+laptop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy New Laptop
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-5">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+all in one+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+all in one pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy All in 1 PC
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-2">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Desktop Repair
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-4">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Laptop Repair
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-6">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Desktop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Desktop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Desktop Upgradation
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-7">
+					<div class="text">
+					<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Laptop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Laptop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Laptop Upgradation
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-8">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Dektop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Dektop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy Old Desktop
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-9">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy Old Laptop
+			</div>
+			<div class="outer">
+				<div class="inside" id="computer-10">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Sell Your Old Devices&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Selling+Your Old Devices&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Sell Your Old Devices
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-container pads recommended w3-padding-32">
+		<h5>Computer Accessories</h5>
+		<br>
+		<div class="flex" id="style-1">
+			<div class="outer">
+				<div class="inside" id="accessories-1">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Keyboard&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Keyboard&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Keyboard
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-2">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Mouse&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Mouse&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Mouse
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-3">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Printer&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Printer&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Printer
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-4">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Cartridge&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Cartridge&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Cartridge
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-5">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Trackpad&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Trackpad&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Trackpad
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-6">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Speakers&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Speakers&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Speakers
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-7">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Webcam&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Webcam&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Webcam
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-8">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Monitor&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Monitor&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Monitor
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-9">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new UPS&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new UPS&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				UPS
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-10">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Other
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-11">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Used Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Used Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy Used Accessories
+			</div>
+			<div class="outer">
+				<div class="inside" id="accessories-12">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Computer Accessories Repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Computer Accessories Repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Accessories Repair
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-container pads recommended w3-padding-32">
+		<h5>Other Services</h5>
+		<br>
+		<div class="flex" id="style-1">
+			<div class="outer">
+				<div class="inside" id="other-1">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Security Cameras&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Security Cameras&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Security Cameras
+			</div>
+			<div class="outer">
+				<div class="inside" id="other-2">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Networking Gears&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Networking Gears&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Networking Gears
+			</div>
+			<div class="outer">
+				<div class="inside" id="other-3">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Connectors&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Connectors&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Connectors
+			</div>
+			<div class="outer">
+				<div class="inside" id="other-4">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Wires&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Wires&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Wires
+			</div>
+			<div class="outer">
+				<div class="inside" id="other-5">
+					<div class="text">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Internet Connection&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Buy Now</div>
+						</a>
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Internet Connection&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+							<div class="price">Query</div>
+						</a>
+					</div>
+				</div>
+				Buy Internet Connection
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+
+</div>
+
+
+<!-- /recommended -->
+
+<!-- reviews -->
+<style type="text/css">
+.review
+{
+	border-top:1px solid hsla(0,0%,61%,.4);
+	border-bottom:1px solid hsla(0,0%,61%,.4);
+}
+.review .w3-third .inner
+{
+	border: 1px solid hsla(0,0%,61%,.4);
+	padding: 10px;
+	border-radius: 4px;
+	min-width: 172px;
+}
+.review .w3-third .inner img
+{
+	width:50px;
+	height: 50px;
+	border-radius: 3px;
+}
+.review .w3-third .inner .comment
+{
+	color: #424242;
+}
+.review .w3-third .inner h5
+{
+	font-size: 18px;
+	font-weight: 600;
+}
+.review .w3-third .inner h6
+{
+	font-weight: 400;
+}
+.review .w3-third .inner .rating
+{
+	background-color: #4caf50;
+	color: #fff;
+	padding:3px;
+	border-radius: 3px;
+	width:60px;
+	text-align: center;
+}
+.review .inner .fi
+{
+	display: table-cell;
+	vertical-align: middle;
+	width: 70px;
+	text-align: center;
+	height: 70px;
+}
+.review .inner .si
+{
+	display: table-cell;
+	vertical-align: middle;
+	padding:5px;
+}
+</style>
+<div class="w3-container review pads w3-padding-32">
+	<h5>Customer Review's</h5>
+	<div class="w3-third w3-padding w3-padding-32">
+		<div class="inner w3-padding-16">
+			<div class="w3-container w3-margin-bottom">
+				<div class="fi">
+					<img src="./svg/001-man.svg">
+				</div>
+				<div class="si">
+					<h5>Sachin</h5>
+					<h6>Owner of Godawn</h6>
+				</div>
+			</div>
+			<div class="comment">
+				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+			</div>
+			<hr>
+			<div class="w3-container">
+				<div class="fi">
+					<img src="./svg/001-editor.svg">
+				</div>
+				<div class="si">
+					<h5>Computer Repair</h5>
+					<div class="rating">4.8&nbsp;<i class="fas fa-star"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w3-third w3-padding w3-padding-32">
+		<div class="inner w3-padding-16">
+			<div class="w3-container w3-margin-bottom">
+				<div class="fi">
+					<img src="./svg/002-girl.svg">
+				</div>
+				<div class="si">
+					<h5>Sonia</h5>
+					<h6>Teacher</h6>
+				</div>
+			</div>
+			<div class="comment">
+				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+			</div>
+			<hr>
+			<div class="w3-container">
+				<div class="fi">
+					<img src="./svg/004-printer-cartridges.svg">
+				</div>
+				<div class="si">
+					<h5>Printer Cartridge</h5>
+					<div class="rating">4.7&nbsp;<i class="fas fa-star"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w3-third w3-padding w3-padding-32">
+		<div class="inner w3-padding-16">
+			<div class="w3-container w3-margin-bottom">
+				<div class="fi">
+					<img src="./svg/003-boy.svg">
+				</div>
+				<div class="si">
+					<h5>Jatin</h5>
+					<h6>Student</h6>
+				</div>
+			</div>
+			<div class="comment">
+				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+			</div>
+			<hr>
+			<div class="w3-container">
+				<div class="fi">
+					<img src="./svg/002-laptop.svg">
+				</div>
+				<div class="si">
+					<h5>Laptop Repair</h5>
+					<div class="rating">5.0&nbsp;<i class="fas fa-star"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /reviews -->
+
+<!-- trust -->
+<style type="text/css">
+.trust
+{
+	border-top: 1px solid hsla(0,0%,61%,.4);
+	border-bottom: 1px solid hsla(0,0%,61%,.4);
+}
+.trust img
+{
+	width: 65px;
+	height:65px;
+}
+.trust .fi
+{
+	display: table-cell;
+	vertical-align: middle;
+	width: 85px;
+	text-align: center;
+	height: 85px;
+}
+.trust .si
+{
+	display: table-cell;
+	vertical-align: middle;
+	padding:5px;
+}
+.trust .two, .trust .one, .trust .three
+{
+	min-height: 130px;
+	height: auto;
+	min-width: 172px;
+}
+.trust .two, .trust .one
+{
+	border-right:1px solid hsla(0,0%,61%,.4);
+}
+@media (max-width:600px)
+{
+	.trust .two, .trust .one
+	{
+		border:0px;
+		border-bottom:1px solid hsla(0,0%,61%,.4);
+	}
+}
+</style>
+<div class="w3-container pads trust w3-padding-32">
+	<div class="w3-third one w3-padding">
+		<div class="fi">
+			<img src="./svg/001-medal.svg">
+		</div>
+		<div class="si">
+			<h6>High Quality & Trusted Professionals</h6>
+			We provide only verified, background checked and high quality professionals
+		</div>
+	</div>
+	<div class="w3-third two w3-padding">
+		<div class="fi">
+			<img src="./svg/003-toolbox.svg">
+		</div>
+		<div class="si">
+			<h6>Matched to Your Needs</h6>
+			We match you with the right professionals with the right budget
+		</div>
+	</div>
+	<div class="w3-third three w3-padding">
+		<div class="fi">
+			<img src="./svg/002-thumbs-up.svg">
+		</div>
+		<div class="si">
+			<h6>Hassle Free Service Delivery</h6>
+			Super convenient, guaranteed service from booking to delivery
+		</div>
+	</div>
+</div>
+<!-- /trust -->
+
+
+<!-- counting -->
+<style type="text/css">
+.counting
+{
+	background-color: #f4f4f4;
+	color: #949494;
+	text-align: center;
+}
+.counting .w3-quarter
+{
+	min-width: 172px;
+}
+.counting .w3-quarter h2
+{
+	margin-bottom: 20px;
+}
+@media (max-width: 600px)
+{
+	.counting h2
+	{
+		margin-bottom: 10px;
+	}
+	.counting h6
+	{
+		margin-bottom: 40px;
+	}
+}
+</style>
+<div class="w3-container pads counting w3-padding-32">
+	<div class="w3-quarter">
+		<h2>107</h2>
+		<h6>LIVE SERVICES</h6>
+	</div>
+	<div class="w3-quarter">
+		<h2>20,000+</h2>
+		<h6>CUSTOMERS SERVED</h6>
+	</div>
+	<div class="w3-quarter">
+		<h2>10+</h2>
+		<h6>VERIFIED EXPERTS</h6>
+	</div>
+	<div class="w3-quarter">
+		<h2>4.6</h2>
+		<h6>AVERAGE RATING</h6>
+	</div>
+</div>
+<!-- /counting -->
+
+<!-- footer -->
+<style type="text/css">
+.footer-1
+{
+	background-color: #222;
+	color: #bababa;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.footer-1 .button
+{
+	float: left;
+	margin-right: 30px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+.footer-1 .button:hover
+{
+	color: #fff;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+@media (max-width: 660px)
+{
+	.footer-1 .button
+	{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+</style>
+<div class="footer-1 w3-container pads">
+	<div class="button">About TSS</div>
+	<div class="button">Ask Query</div>
+	<div class="button">Book Appointment</div>
+	<div class="button">Join us</div>
+	<div class="button">Contact</div>
+</div>
+
+<style type="text/css">
+.footer-2
+{
+	border-top: 1px solid grey;
+	background-color: #222;
+	color: #bababa;
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+.footer-2 .one
+{
+	width: 150px;
+	float: left;
+}
+.footer-2 .two
+{
+	width: 150px;
+	float: left;
+}
+.footer-2 .three
+{
+	width: 150px;
+	float: left;
+}
+.footer-2 .four
+{
+	width: 150px;
+	float: left;
+}
+.footer-2 .five
+{
+	width: 150px;
+	float: left;
+}
+.footer-2 .button
+{
+	cursor: pointer;
+	transition: 0.2s;
+	-o-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-webkit-transition: 0.2s;
+}
+.footer-2 .button:hover
+{
+	color: #fff;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.footer-2 .heading
+{
+	font-size: 17px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footer-2 .button
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+</style>
+<div class="w3-container pads footer-2">
+	<div class="one">
+		<div class="heading">COMPANY</div>
+		<div class="button">Review</div>
+		<div class="button">Coupons</div>
+	</div>
+	<div class="two">
+		<div class="heading">SERVING IN</div>
+		<div class="button">Delhi NCR</div>
+		<div class="button">Bangalore</div>
+		<div class="button">Mumbai</div>
+		<div class="button">Chennai</div>
+	</div>
+	<div class="three">
+		<div class="heading" id="big-no">&nbsp;</div>
+		<div class="button">Hyderabad</div>
+		<div class="button">Pune</div>
+		<div class="button">Ahmedabad</div>
+		<div class="button">Kolkata</div>
+	</div>
+	<div class="four">
+		<div class="heading" id="big-no">&nbsp;</div>
+		<div class="button">Noida</div>
+		<div class="button">Greater Noida</div>
+		<div class="button">Faridabad</div>
+		<div class="button">Gurgaon</div>
+	</div>
+	<div class="five">
+		<div class="heading" id="big-no">&nbsp;</div>
+		<div class="button">Gaziabad</div>
+		<div class="button">Thane</div>
+		<div class="button">Navi Mumbai</div>
+		<div class="button">Secunderabad</div>
+	</div>
+</div>
+
+<style type="text/css">
+.footer-3
+{
+	background-color: #222;
+	color: #bababa;
+	height: 70px;
+	padding-top: 22px;
+	border-top:1px solid grey;
+}
+.footer-3 .one i
+{
+	background-color: #bababa;
+	width:25px;
+	padding-top: 5px;
+	text-align: center;
+	border-radius: 3px;
+	margin-right:10px;
+	color: #222;
+	height: 25px;
+}
+.footer-3 .one
+{
+	max-width:600px;
+	width:auto;
+	font-size: 15px;
+	float:left;
+}
+.footer-3 .two
+{
+	float: right;
+}
+.footer-3 .two .button
+{
+	margin-left:15px;
+	margin-right:15px;
+	font-size: 16px;
+	float:right;
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+.footer-3 .two .button:hover
+{
+	color: #fff;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.footer-3 .two .icon
+{
+	float: right;
+	background-color: #bababa;
+	color: #424242;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 4px;
+	margin-top: -4px;
+	font-size: 25px;
+	margin-left:10px;
+	margin-right:10px;
+}
+@media (max-width: 700px)
+{
+	.footer-3 .one
+	{
+		float: left;
+		margin-bottom: 15px;
+	}
+	.footer-3 .two
+	{
+		float: left;
+		margin-bottom: 15px;
+	}
+	.footer-3
+	{
+		height: auto;
+		padding-bottom: 15px;
+	}
+}
+</style>
+<div class="w3-container footer-3 pads">
+	<div class="one">
+		<div class="button"><i class="fas fa-wrench w3-left"></i><h5 class="w3-left">TSS</h5>&nbsp;&nbsp;&nbsp;&copy;&nbsp;2018 All Rights Reserved</div>
+	</div>
+	<div class="two">
+		<div class="icon"><i class="fas fa-angle-up"></i></div>
+		<div class="button">Policy</div>
+		<div class="button">Terms & Condition</div>
+	</div>
+</div>
+<!-- footer -->
+
+</body>
+</html>
