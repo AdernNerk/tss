@@ -242,10 +242,12 @@ else
 {
 	background: lightblue;
 	margin-right: 30px;
+	cursor: pointer;
 }
 .start .appointment
 {
 	background: lightgreen;
+	cursor: pointer;
 }
 .start .two
 {
@@ -286,8 +288,8 @@ else
 	<div class="w3-container outer">
 		<div class="place">
 			<i class="fas fa-map-marker-alt w3-left"></i> 
-			<select>
-				<option selected="true" disabled="true">Place</option>
+			<select id="place">
+				<option selected="true">Place</option>
 				<option>Alipur</option>
 				<option>Mukhmelpur</option>
 				<option>Hiranki</option>
@@ -308,19 +310,18 @@ else
 		</div>
 		<div class="service">
 			<i class="fas fa-wrench w3-left"></i> 
-			<select>
-				<option selected="true" disabled="true">Service</option>
+			<select id="service">
+				<option selected="true">Service</option>
 				<option>Repair</option>
 				<option>Purchase New</option>
 				<option>Purchase Old</option>
-				<option>Service</option>
 				<option>Other</option>
 			</select>
 		</div>
 		<div class="product">
 			<i class="fas fa-desktop w3-left"></i> 
-			<select>
-				<option selected="true" disabled="true">Product</option>
+			<select id="product">
+				<option selected="true">Product</option>
 				<option>Computer</option>
 				<option>Laptop</option>
 				<option>Printer</option>
@@ -335,14 +336,76 @@ else
 	</div>
 	<br><br><br id="big-no"><br id="big-no">
 	<div class="two">
-		<div class="query">
+		<div class="query" id="query">
 			Ask your Query
 		</div>
-		<div class="appointment">
+		<div class="appointment" id="appointment">
 			Book Appointment
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$("#query").click(function(){
+	if(($("#product").val()=="Product")||($("#place").val()=="Place"))
+	{
+	if($("#product").val()=="Product")
+	{
+		alert("Please select a product.");
+	}
+	if($("#place").val()=="Place")
+	{
+		alert("Please select a place.");
+	}
+	}
+	else
+	{
+		var a = $("#service").val();
+		var b = $("#product").val();
+		var c = $("#place").val();
+
+		var win = window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query : '+a+' ( '+b+' ) at '+c+'&tf=1', '_blank');
+		if (win) {
+			//Browser has allowed it to be opened
+		win.focus();
+		} 
+		else {
+			//Browser has blocked it
+			alert('Please allow popups for this website');
+		}
+
+	}
+});
+$("#appointment").click(function(){
+	if(($("#product").val()=="Product")||($("#place").val()=="Place"))
+	{
+	if($("#product").val()=="Product")
+	{
+		alert("Please select a product.");
+	}
+	if($("#place").val()=="Place")
+	{
+		alert("Please select a place.");
+	}
+	}
+	else
+	{
+		var a = $("#service").val();
+		var b = $("#product").val();
+		var c = $("#place").val();
+
+		var win = window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Book appointment : '+a+' ( '+b+' ) at '+c+'&tf=1', '_blank');
+		if (win) {
+			//Browser has allowed it to be opened
+		win.focus();
+		} 
+		else {
+			//Browser has blocked it
+			alert('Please allow popups for this website');
+		}
+
+	}
+});
+</script>
 <!-- div one -->
 
 <!-- div grey bg and icons -->
@@ -395,38 +458,74 @@ else
 }
 </style>
 <div class="w3-container grey pads">
-	<div class="fi">
-		<img src="./svg/001-editor.svg">
-		<br>
-		Desktop
-	</div>
-	<div class="fi">
-		<img src="./svg/005-keyboard.svg">
-		<br>
-		Computer Accesories
-	</div>
-	<div class="fi">
-		<img src="./svg/002-laptop.svg">
-		<br>
-		Laptop
-	</div>
-	<div class="fi">
-		<img src="./svg/006-windows.svg">
-		<br>
-		Softwares
-	</div>
-	<div class="fi">
-		<img src="./svg/003-printer.svg">
-		<br>
-		printer
-	</div>
-	<div class="fi">
-		<img src="./svg/004-printer-cartridges.svg">
-		<br>
-		Cartdriges
-	</div>
+	<a href="#content-grey">
+		<div class="fi" id="desktop">
+			<img src="./svg/001-editor.svg">
+			<br>
+			Desktop
+		</div>
+	</a>
+	<a href="#content-grey">
+		<div class="fi" id="accessories">
+			<img src="./svg/005-keyboard.svg">
+			<br>
+			Computer Accesories
+		</div>
+	</a>
+	<a href="#content-grey">
+		<div class="fi" id="laptop">
+			<img src="./svg/002-laptop.svg">
+			<br>
+			Laptop
+		</div>
+	</a>
+	<a href="#content-grey">
+		<div class="fi" id="software">
+			<img src="./svg/006-windows.svg">
+			<br>
+			Softwares
+		</div>
+	</a>
+	<a href="#content-grey">
+		<div class="fi" id="printer">
+			<img src="./svg/003-printer.svg">
+			<br>
+			printer
+		</div>
+	</a>
+	<a href="#content-grey">
+		<div class="fi" id="cartdrige">
+			<img src="./svg/004-printer-cartridges.svg">
+			<br>
+			Cartdriges
+		</div>
+	</a>
 </div>
+<script type="text/javascript">
+$("#desktop").click(function(){
+	$("#content-grey").load('./part/desktop.html');
+});
+$("#accessories").click(function(){
+	$("#content-grey").load('./part/accessories.html');
+});
+$("#laptop").click(function(){
+	$("#content-grey").load('./part/laptop.html');
+});
+$("#software").click(function(){
+	$("#content-grey").load('./part/software.html');
+});
+$("#printer").click(function(){
+	$("#content-grey").load('./part/printer.html');
+});
+$("#cartdrige").click(function(){
+	$("#content-grey").load('./part/cartdrige.html');
+});
+</script>
 <!-- /div grey bg and icons -->
+
+<!-- the grey bg and icons opening sections -->
+<div id="content-grey"></div>
+<!-- /the grey bg and icons opening sections -->
 
 <!-- recommended -->
 <style type="text/css">
@@ -670,10 +769,10 @@ else
 			<div class="outer">
 				<div class="inside" id="recommended-1">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -683,10 +782,10 @@ else
 			<div class="outer">
 				<div class="inside" id="recommended-2">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -696,10 +795,10 @@ else
 			<div class="outer">
 				<div class="inside" id="recommended-3">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -709,10 +808,10 @@ else
 			<div class="outer">
 				<div class="inside" id="recommended-4">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new computer accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new computer accessories&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about computer accessories repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about computer accessories repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -729,10 +828,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-1">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+dektop+pc&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+dektop+pc&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -742,10 +841,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-3">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+laptop+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+laptop+pc&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+laptop&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -755,10 +854,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-5">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+all in one+pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy a+new+all in one+pc&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+all in one pc&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+buying+new+all in one pc&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -768,10 +867,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-2">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for desktop pc repair&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about dektop+pc repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -781,10 +880,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-4">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Request for laptop repair&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about laptop repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -794,10 +893,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-6">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Desktop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Desktop Upgradation&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Desktop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Desktop Upgradation&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -807,10 +906,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-7">
 					<div class="text">
-					<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Laptop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+					<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Laptop Upgradation&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Laptop Upgradation&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Laptop Upgradation&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -820,10 +919,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-8">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Dektop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Dektop&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Dektop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Dektop&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -833,10 +932,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-9">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy old Laptop&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Laptop&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+old Laptop&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -846,10 +945,10 @@ else
 			<div class="outer">
 				<div class="inside" id="computer-10">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Sell Your Old Devices&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Sell Your Old Devices&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Selling+Your Old Devices&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Selling+Your Old Devices&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -866,10 +965,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-1">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Keyboard&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Keyboard&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Keyboard&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Keyboard&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -879,10 +978,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-2">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Mouse&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Mouse&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Mouse&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Mouse&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -892,10 +991,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-3">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Printer&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Printer&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Printer&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Printer&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -905,10 +1004,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-4">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Cartridge&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Cartridge&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Cartridge&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Cartridge&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -918,10 +1017,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-5">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Trackpad&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Trackpad&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Trackpad&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Trackpad&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -931,10 +1030,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-6">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Speakers&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Speakers&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Speakers&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Speakers&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -944,10 +1043,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-7">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Webcam&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Webcam&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Webcam&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Webcam&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -957,10 +1056,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-8">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Monitor&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Monitor&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Monitor&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Monitor&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -970,10 +1069,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-9">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new UPS&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new UPS&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new UPS&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new UPS&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -983,10 +1082,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-10">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Computer Accessories&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Computer Accessories&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -996,10 +1095,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-11">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Used Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Used Computer Accessories&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Used Computer Accessories&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Used Computer Accessories&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1009,10 +1108,10 @@ else
 			<div class="outer">
 				<div class="inside" id="accessories-12">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Computer Accessories Repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Computer Accessories Repair&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Computer Accessories Repair&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query about Computer Accessories Repair&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1029,10 +1128,10 @@ else
 			<div class="outer">
 				<div class="inside" id="other-1">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Security Cameras&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Security Cameras&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Security Cameras&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Security Cameras&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1042,10 +1141,10 @@ else
 			<div class="outer">
 				<div class="inside" id="other-2">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Networking Gears&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy new Networking Gears&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Networking Gears&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+new Networking Gears&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1055,10 +1154,10 @@ else
 			<div class="outer">
 				<div class="inside" id="other-3">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Connectors&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Connectors&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Connectors&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Connectors&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1068,10 +1167,10 @@ else
 			<div class="outer">
 				<div class="inside" id="other-4">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Wires&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Wires&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Wires&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Wires&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1081,10 +1180,10 @@ else
 			<div class="outer">
 				<div class="inside" id="other-5">
 					<div class="text">
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Internet Connection&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Buy Internet Connection&tf=1" target="_blank">
 							<div class="price">Buy Now</div>
 						</a>
-						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Internet Connection&bcc=tssolutions.it@gmail.com&tf=1" target="_blank">
+						<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&su=Query+about+Buying+Internet Connection&tf=1" target="_blank">
 							<div class="price">Query</div>
 						</a>
 					</div>
@@ -1102,143 +1201,17 @@ else
 <!-- /recommended -->
 
 <!-- reviews -->
-<style type="text/css">
-.review
+<div id="review"></div>
+<script type="text/javascript">
+if($(document).width()>800)
 {
-	border-top:1px solid hsla(0,0%,61%,.4);
-	border-bottom:1px solid hsla(0,0%,61%,.4);
+$("#review").load('./big-review.html');
 }
-.review .w3-third .inner
+else
 {
-	border: 1px solid hsla(0,0%,61%,.4);
-	padding: 10px;
-	border-radius: 4px;
-	min-width: 172px;
+$("#review").load('./small-review.html');
 }
-.review .w3-third .inner img
-{
-	width:50px;
-	height: 50px;
-	border-radius: 3px;
-}
-.review .w3-third .inner .comment
-{
-	color: #424242;
-}
-.review .w3-third .inner h5
-{
-	font-size: 18px;
-	font-weight: 600;
-}
-.review .w3-third .inner h6
-{
-	font-weight: 400;
-}
-.review .w3-third .inner .rating
-{
-	background-color: #4caf50;
-	color: #fff;
-	padding:3px;
-	border-radius: 3px;
-	width:60px;
-	text-align: center;
-}
-.review .inner .fi
-{
-	display: table-cell;
-	vertical-align: middle;
-	width: 70px;
-	text-align: center;
-	height: 70px;
-}
-.review .inner .si
-{
-	display: table-cell;
-	vertical-align: middle;
-	padding:5px;
-}
-</style>
-<div class="w3-container review pads w3-padding-32">
-	<h5>Customer Review's</h5>
-	<div class="w3-third w3-padding w3-padding-32">
-		<div class="inner w3-padding-16">
-			<div class="w3-container w3-margin-bottom">
-				<div class="fi">
-					<img src="./svg/001-man.svg">
-				</div>
-				<div class="si">
-					<h5>Sachin</h5>
-					<h6>Owner of Godawn</h6>
-				</div>
-			</div>
-			<div class="comment">
-				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
-			</div>
-			<hr>
-			<div class="w3-container">
-				<div class="fi">
-					<img src="./svg/001-editor.svg">
-				</div>
-				<div class="si">
-					<h5>Computer Repair</h5>
-					<div class="rating">4.8&nbsp;<i class="fas fa-star"></i></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-third w3-padding w3-padding-32">
-		<div class="inner w3-padding-16">
-			<div class="w3-container w3-margin-bottom">
-				<div class="fi">
-					<img src="./svg/002-girl.svg">
-				</div>
-				<div class="si">
-					<h5>Sonia</h5>
-					<h6>Teacher</h6>
-				</div>
-			</div>
-			<div class="comment">
-				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
-			</div>
-			<hr>
-			<div class="w3-container">
-				<div class="fi">
-					<img src="./svg/004-printer-cartridges.svg">
-				</div>
-				<div class="si">
-					<h5>Printer Cartridge</h5>
-					<div class="rating">4.7&nbsp;<i class="fas fa-star"></i></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-third w3-padding w3-padding-32">
-		<div class="inner w3-padding-16">
-			<div class="w3-container w3-margin-bottom">
-				<div class="fi">
-					<img src="./svg/003-boy.svg">
-				</div>
-				<div class="si">
-					<h5>Jatin</h5>
-					<h6>Student</h6>
-				</div>
-			</div>
-			<div class="comment">
-				Hired #tirthrana as computer repair mechanic... Great resource though #TSS
-			</div>
-			<hr>
-			<div class="w3-container">
-				<div class="fi">
-					<img src="./svg/002-laptop.svg">
-				</div>
-				<div class="si">
-					<h5>Laptop Repair</h5>
-					<div class="rating">5.0&nbsp;<i class="fas fa-star"></i></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+</script>
 <!-- /reviews -->
 
 <!-- trust -->
@@ -1367,245 +1340,10 @@ else
 <!-- /counting -->
 
 <!-- footer -->
-<style type="text/css">
-.footer-1
-{
-	background-color: #222;
-	color: #bababa;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.footer-1 .button
-{
-	float: left;
-	margin-right: 30px;
-	cursor: pointer;
-	font-size: 16px;
-	transition: 0.2s;
-	-webkit-transition: 0.2s;
-	-o-transition: 0.2s;
-	-moz-transition: 0.2s;
-}
-.footer-1 .button:hover
-{
-	color: #fff;
-	transition: 0.3s;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	-moz-transition: 0.3s;
-}
-@media (max-width: 660px)
-{
-	.footer-1 .button
-	{
-		width: 100%;
-		text-align: center;
-		margin-bottom: 10px;
-	}
-}
-
-</style>
-<div class="footer-1 w3-container pads">
-	<div class="button">About TSS</div>
-	<div class="button">Ask Query</div>
-	<div class="button">Book Appointment</div>
-	<div class="button">Join us</div>
-	<div class="button">Contact</div>
-</div>
-
-<style type="text/css">
-.footer-2
-{
-	border-top: 1px solid grey;
-	background-color: #222;
-	color: #bababa;
-	padding-top: 28px;
-	padding-bottom: 28px;
-}
-.footer-2 .one
-{
-	width: 150px;
-	float: left;
-}
-.footer-2 .two
-{
-	width: 150px;
-	float: left;
-}
-.footer-2 .three
-{
-	width: 150px;
-	float: left;
-}
-.footer-2 .four
-{
-	width: 150px;
-	float: left;
-}
-.footer-2 .five
-{
-	width: 150px;
-	float: left;
-}
-.footer-2 .button
-{
-	cursor: pointer;
-	transition: 0.2s;
-	-o-transition: 0.2s;
-	-moz-transition: 0.2s;
-	-webkit-transition: 0.2s;
-}
-.footer-2 .button:hover
-{
-	color: #fff;
-	transition: 0.3s;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	-moz-transition: 0.3s;
-}
-.footer-2 .heading
-{
-	font-size: 17px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.footer-2 .button
-{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-</style>
-<div class="w3-container pads footer-2">
-	<div class="one">
-		<div class="heading">COMPANY</div>
-		<div class="button">Review</div>
-		<div class="button">Coupons</div>
-	</div>
-	<div class="two">
-		<div class="heading">SERVING IN</div>
-		<div class="button">Delhi NCR</div>
-		<div class="button">Bangalore</div>
-		<div class="button">Mumbai</div>
-		<div class="button">Chennai</div>
-	</div>
-	<div class="three">
-		<div class="heading" id="big-no">&nbsp;</div>
-		<div class="button">Hyderabad</div>
-		<div class="button">Pune</div>
-		<div class="button">Ahmedabad</div>
-		<div class="button">Kolkata</div>
-	</div>
-	<div class="four">
-		<div class="heading" id="big-no">&nbsp;</div>
-		<div class="button">Noida</div>
-		<div class="button">Greater Noida</div>
-		<div class="button">Faridabad</div>
-		<div class="button">Gurgaon</div>
-	</div>
-	<div class="five">
-		<div class="heading" id="big-no">&nbsp;</div>
-		<div class="button">Gaziabad</div>
-		<div class="button">Thane</div>
-		<div class="button">Navi Mumbai</div>
-		<div class="button">Secunderabad</div>
-	</div>
-</div>
-
-<style type="text/css">
-.footer-3
-{
-	background-color: #222;
-	color: #bababa;
-	height: 70px;
-	padding-top: 22px;
-	border-top:1px solid grey;
-}
-.footer-3 .one i
-{
-	background-color: #bababa;
-	width:25px;
-	padding-top: 5px;
-	text-align: center;
-	border-radius: 3px;
-	margin-right:10px;
-	color: #222;
-	height: 25px;
-}
-.footer-3 .one
-{
-	max-width:600px;
-	width:auto;
-	font-size: 15px;
-	float:left;
-}
-.footer-3 .two
-{
-	float: right;
-}
-.footer-3 .two .button
-{
-	margin-left:15px;
-	margin-right:15px;
-	font-size: 16px;
-	float:right;
-	cursor: pointer;
-	transition: 0.2s;
-	-webkit-transition: 0.2s;
-	-moz-transition: 0.2s;
-	-o-transition: 0.2s;
-}
-.footer-3 .two .button:hover
-{
-	color: #fff;
-	transition: 0.3s;
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-	-o-transition: 0.3s;
-}
-.footer-3 .two .icon
-{
-	float: right;
-	background-color: #bababa;
-	color: #424242;
-	padding-left: 8px;
-	padding-right: 8px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	border-radius: 4px;
-	margin-top: -4px;
-	font-size: 25px;
-	margin-left:10px;
-	margin-right:10px;
-}
-@media (max-width: 700px)
-{
-	.footer-3 .one
-	{
-		float: left;
-		margin-bottom: 15px;
-	}
-	.footer-3 .two
-	{
-		float: left;
-		margin-bottom: 15px;
-	}
-	.footer-3
-	{
-		height: auto;
-		padding-bottom: 15px;
-	}
-}
-</style>
-<div class="w3-container footer-3 pads">
-	<div class="one">
-		<div class="button"><i class="fas fa-wrench w3-left"></i><h5 class="w3-left">TSS</h5>&nbsp;&nbsp;&nbsp;&copy;&nbsp;2018 All Rights Reserved</div>
-	</div>
-	<div class="two">
-		<div class="icon"><i class="fas fa-angle-up"></i></div>
-		<div class="button">Policy</div>
-		<div class="button">Terms & Condition</div>
-	</div>
-</div>
+<div id="footer"></div>
+<script type="text/javascript">
+$("#footer").load('./footer.html');
+</script>
 <!-- footer -->
 
 </body>

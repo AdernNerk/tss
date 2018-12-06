@@ -1,0 +1,259 @@
+<style>
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<!-- styling for customer review -->
+<style type="text/css">
+.review-container
+{
+  border-top:1px solid hsla(0,0%,61%,.4);
+  border-bottom:1px solid hsla(0,0%,61%,.4);
+}
+.review .something
+{
+  width: 100%;
+}
+.review .somethings .inner
+{
+  border: 1px solid hsla(0,0%,61%,.4);
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 172px;
+}
+.review .somethings .inner img
+{
+  width:50px;
+  height: 50px;
+  border-radius: 3px;
+}
+.review .somethings .inner .comment
+{
+  color: #424242;
+}
+.review .somethings .inner h5
+{
+  font-size: 18px;
+  font-weight: 600;
+}
+.review .somethings .inner h6
+{
+  font-weight: 400;
+}
+.review .somethings .inner .rating
+{
+  background-color: #4caf50;
+  color: #fff;
+  padding:3px;
+  border-radius: 3px;
+  width:60px;
+  text-align: center;
+}
+.review .inner .fi
+{
+  display: table-cell;
+  vertical-align: middle;
+  width: 70px;
+  text-align: center;
+  height: 70px;
+}
+.review .inner .si
+{
+  display: table-cell;
+  vertical-align: middle;
+  padding:5px;
+}
+</style>
+<!-- /styling for customer review -->
+
+<div class="review-container pads w3-padding-32">
+  <h5 class="w3-center">Customer Review's</h5>
+<div class="slideshow-container">
+	<div class="mySlides fade">
+	  <div class="w3-container review">
+  <div class="somethings w3-padding w3-padding-32">
+    <div class="inner w3-padding-16">
+      <div class="w3-container w3-margin-bottom">
+        <div class="fi">
+          <img src="./svg/001-man.svg">
+        </div>
+        <div class="si">
+          <h5>Sachin</h5>
+          <h6>Owner of Godawn</h6>
+        </div>
+      </div>
+      <div class="comment">
+        Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+      </div>
+      <hr>
+      <div class="w3-container">
+        <div class="fi">
+          <img src="./svg/001-editor.svg">
+        </div>
+        <div class="si">
+          <h5>Computer Repair</h5>
+          <div class="rating">4.8&nbsp;<i class="fas fa-star"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+  <div class="mySlides fade">
+    <div class="w3-container review">
+  <div class="somethings w3-padding w3-padding-32">
+    <div class="inner w3-padding-16">
+      <div class="w3-container w3-margin-bottom">
+        <div class="fi">
+          <img src="./svg/002-girl.svg">
+        </div>
+        <div class="si">
+          <h5>Sonia</h5>
+          <h6>Teacher</h6>
+        </div>
+      </div>
+      <div class="comment">
+        Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+      </div>
+      <hr>
+      <div class="w3-container">
+        <div class="fi">
+          <img src="./svg/004-printer-cartridges.svg">
+        </div>
+        <div class="si">
+          <h5>Printer Cartridge</h5>
+          <div class="rating">4.7&nbsp;<i class="fas fa-star"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+	<div class="mySlides fade">
+	  <div class="w3-container review">
+  <div class="somethings w3-padding w3-padding-32">
+    <div class="inner w3-padding-16">
+      <div class="w3-container w3-margin-bottom">
+        <div class="fi">
+          <img src="./svg/003-boy.svg">
+        </div>
+        <div class="si">
+          <h5>Jatin</h5>
+          <h6>Student</h6>
+        </div>
+      </div>
+      <div class="comment">
+        Hired #tirthrana as computer repair mechanic... Great resource though #TSS
+      </div>
+      <hr>
+      <div class="w3-container">
+        <div class="fi">
+          <img src="./svg/002-laptop.svg">
+        </div>
+        <div class="si">
+          <h5>Laptop Repair</h5>
+          <div class="rating">5.0&nbsp;<i class="fas fa-star"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
